@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,700&display=swap');
 
 :root {
-  --brand-color: #0EA5E9;
-  --darkest-color: #0F172A;
-  --dark-color: #37476C;
-  --mid-color: #CBD5E1;
-  --light-color: #E6ECF3;
-  --lightest-color: #FFFFFF;
+    --brand-color: #0EA5E9;
+    --darkest-color: #0F172A;
+    --dark-color: #37476C;
+    --mid-color: #CBD5E1;
+    --light-color: #E6ECF3;
+    --red-color: #E70D11;
+    --lightest-color: #FFFFFF;
 }
-*{
+
+* {
     font-family: 'Josefin Sans', cursive;
     color: var(--darkest-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-section{
+
+section {
     min-height: 100vh;
 }
-button{
+
+button {
     background-color: var(--dark-color);
     border-radius: 1rem;
     width: 12rem;
@@ -29,11 +33,12 @@ button{
     font-size: 1.2rem;
     transition-duration: 350ms;
 }
-button:active{
+
+button:active {
     background-color: var(--darkest-color);
 }
 
-input{
+input {
     width: 20rem;
     height: 3rem;
     padding: 0.3rem;
@@ -42,7 +47,8 @@ input{
     border-radius: 0.6rem;
     text-decoration: none;
 }
-fieldset{
+
+fieldset {
     display: flex;
     width: 20rem;
     height: 100%;

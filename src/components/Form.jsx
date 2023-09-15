@@ -36,7 +36,7 @@ const Form = () => {
             </p>
 
             <p>
-                <Link to="/"><button>Criar</button></Link>
+                <Link to="/finish"><button>Criar</button></Link>
             </p>
 
 
