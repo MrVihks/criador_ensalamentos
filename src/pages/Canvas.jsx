@@ -9,7 +9,7 @@ const Canvas = () => {
     return (
         <section>
             <Toaster />
-            <Display width={window.screen.width} height="500" />
+            <Display width={window.screen.width} height="600" />
         </section>
     )
 }
