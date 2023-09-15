@@ -9,10 +9,11 @@
   --lightest-color: #FFFFFF;
 }
 *{
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', cursive;
     color: var(--darkest-color);
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 section{
     min-height: 100vh;
@@ -30,4 +31,22 @@ button{
 }
 button:active{
     background-color: var(--darkest-color);
+}
+
+input{
+    width: 20rem;
+    height: 3rem;
+    padding: 0.3rem;
+    border: 2px var(--dark-color) solid;
+    outline: none;
+    border-radius: 0.6rem;
+    text-decoration: none;
+}
+fieldset{
+    display: flex;
+    width: 20rem;
+    height: 100%;
+    text-decoration: none;
+    border: 2px var(--dark-color) solid;
+    border-radius: 0.6rem;
 }

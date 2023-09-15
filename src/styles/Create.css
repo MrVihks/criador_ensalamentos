@@ -1,0 +1,39 @@
+.form {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+
+}
+
+.radios {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 20rem;
+}
+
+.radios input {
+    height: 2rem;
+}
+
+.radios label {
+    font-size: 1.5rem;
+}
+
+#side {
+    font-size: 1.8rem;
+    margin: 0.8rem;
+}
+.form button{
+    width: 20rem;
+    margin: auto;
+}
+.form-content{
+    font-size: 1.8rem;
+}
+.form-content p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
