@@ -1,0 +1,13 @@
+.canvas-content{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin:auto;
+}
+.canvas-content h1{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.description{
+    font-size: 1.2rem;
+}
