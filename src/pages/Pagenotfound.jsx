@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Robot from "../robot.svg"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Robot from "../robot.svg";
 
 const PageNotFound = () => {
   return (
@@ -11,7 +11,7 @@ const PageNotFound = () => {
         <Link to="/"><button>Voltar</button></Link>
       </article>
     </section>
-  )
+  );
 }
 
-export default PageNotFound
+export default PageNotFound;

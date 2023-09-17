@@ -1,5 +1,5 @@
-import React from 'react'
-import "../styles/Create.css"
+import React from 'react';
+import "../styles/Create.css";
 import Form from '../components/Form';
 
 const Create = () => {
@@ -7,7 +7,7 @@ const Create = () => {
     <section className="form-content">
       <Form />
     </section>
-  )
+  );
 }
 
-export default Create
+export default Create;
