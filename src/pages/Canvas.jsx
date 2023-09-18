@@ -24,7 +24,8 @@ const Canvas = () => {
     return (
         <section className='canvas-content'>
             <h1>Ensalamento</h1>
-            <Display width="400" height="670" tables={amount} teacherName={teacherName} studentA={studentA} studentB={studentB} grade={grade} date={date} side={side}/>
+            <p>Você pode imprimir esse ensalamento</p>
+            <Display className="display" width="400" height="670" tables={amount} teacherName={teacherName} studentA={studentA} studentB={studentB} grade={grade} date={date} side={side}/>
             <a href='/create'> voltar</a>
         </section>
     );

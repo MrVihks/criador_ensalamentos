@@ -1,12 +1,22 @@
 .canvas-content{
-
-    text-align: center;
+    text-align: center;    
     flex-direction: column;
+    overflow-x: auto;
+    white-space: nowrap;
     margin:auto;
 }
 .canvas-content h1{
     text-transform: uppercase;
+    margin: 1rem;
     font-size: 2rem;
+}
+.canvas-content p{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.canvas-content a{
+    font-size: 1.5rem;
 }
 .description{
     font-size: 1.2rem;

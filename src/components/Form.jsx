@@ -42,7 +42,7 @@ const Form = () => {
             <p className='input-item'>
                 <label>Número de estudantes:</label><br />
                 <input type="number" placeholder='Quantidade' value={amount} onChange={(e) => setAmount(e.target.value)} /><br />
-                <span style={{ color: "var(--red-color)", fontSize: "0.9rem" }}>*Máximo 50 estudantes</span>
+                <span style={{ color: "var(--red-color)", fontSize: "0.9rem" }}>*Máximo 46 estudantes</span>
             </p>
             <p className='input-item'>
                 <fieldset className='radios'>

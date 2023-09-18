@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Robot from "../robot.svg";
+import Robot from "../svgs/robot.svg";
 
 const PageNotFound = () => {
   return (

@@ -39,15 +39,7 @@ async function generate(context, tables, height, width) {
         for (let x = 5; x < width; x += 70) {
             if (index >= tables) {
                 // Se todos os números únicos foram usados, encerra o loop
-                let newTables = tables;
-                let result = newTables / yValue;
-                let newX = x;
-                while (result % 1 !== 0) {
-                    context.strokeRect(newX, y, 35, 35);
-                    newX += 70;
-                    newTables++;
-                    result = newTables / yValue;
-                }
+                
                 return;
             }
 
@@ -107,9 +99,8 @@ const Display = (props) => {
     return (
         <>
             <Toaster />
-            <canvas ref={canvasRef} width={props.width - 8} height={props.height} style={{ border: "4px solid black" }} />
+            <canvas className='display' ref={canvasRef} width={props.width - 8} height={props.height} style={{ border: "4px solid black" }} />
             <article className='description'>
-                <p>Você pode imprimir esse ensalamento</p>
                 <button onClick={handleClick}>Salvar</button>
             </article>
         </>

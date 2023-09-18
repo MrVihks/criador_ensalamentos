@@ -1,0 +1,16 @@
+.footer{
+    height: 35vh;
+    color: var(--mid-color);
+    background-color: var(--dark-color);
+    font-size: 1.3rem;
+}
+.footer article{
+    padding:2rem;
+    margin-top: 2rem;
+}
+.footer h3 h1 p{
+    color: var(--mid-color);
+}
+#icon{
+    margin-top: 1rem;
+}
