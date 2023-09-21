@@ -10,10 +10,12 @@ import './index.css'
 import PageNotFound from './pages/Pagenotfound.jsx';
 import Canvas from './pages/Canvas.jsx';
 import Footer from './components/Footer.jsx';
+import Navbar from './components/Navbar.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
+    <Navbar />
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />} />
