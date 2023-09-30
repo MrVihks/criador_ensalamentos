@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
-
+import { Toaster ,toast } from 'react-hot-toast';
 
 const Form = () => {
     const date = new Date();
@@ -10,7 +10,7 @@ const Form = () => {
     const [studentA, setStudentA] = useState("");
     const [studentB, setStudentB] = useState("");
     const [grade, setGrade] = useState("");
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState();
     const [side, setSide] = useState("left");
     const saveValues = () => {
         Cookies.set("teacherName", teacherName, { expires: 1 });
@@ -41,7 +41,13 @@ const Form = () => {
             </p>
             <p className='input-item'>
                 <label>Número de estudantes:</label><br />
-                <input type="number" placeholder='Quantidade' value={amount} onChange={(e) => setAmount(e.target.value)} /><br />
+                <input type="number" placeholder='Quantidade' value={amount} onChange={(function studentsAmount(e){ if(e.target.value <= 46 ){
+                   setAmount(e.target.value); 
+                }else{
+                    toast.error("A quantidade deve ser menor que 46")
+                    setAmount(0)
+                }
+                })} /><br />
                 <span style={{ color: "var(--red-color)", fontSize: "0.9rem" }}>*Máximo 46 estudantes</span>
             </p>
             <p className='input-item'>
@@ -58,8 +64,10 @@ const Form = () => {
                 </fieldset>
             </p>
             <p>
+                <Toaster />
                 <Link to="/finish"><button onClick={saveValues()}>Criar</button></Link>
             </p>
+            <a href='/'> voltar</a>
         </form>
     );
 }

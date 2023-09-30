@@ -4,5 +4,25 @@
     width: 100%;
     top: 0;
     overflow: hidden;
-    padding: 0.5rem;
+    padding: 1rem;
+   
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+.navbar a{
+    font-size: 1.4rem;
+    display: flex;
+    transition-duration: 350ms;
+    text-align: center;    
+    text-decoration: none;
+    padding: 0.6rem;
+    color: var(--light-color);
+}
+.navbar a:hover{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 1rem;
 }

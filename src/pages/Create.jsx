@@ -6,6 +6,7 @@ const Create = () => {
   return (
     <section className="form-content">
       <Form />
+  
     </section>
   );
 }

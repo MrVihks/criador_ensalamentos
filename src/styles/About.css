@@ -1,0 +1,24 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about p{
+   
+    border: 0.3rem var(--dark-color) solid;
+    font-size: 1.6rem;
+    text-align: justify;  
+    padding:2rem;
+    margin-bottom: 2rem;
+    border-radius: 1.3rem;
+}
+.img-box{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 768px){
+    .about p{
+        width: 60rem;
+    }
+}
