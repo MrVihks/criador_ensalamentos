@@ -1,25 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
-import { Toaster ,toast } from 'react-hot-toast';
+import { Toaster, toast } from 'react-hot-toast';
 
 const Form = () => {
     const date = new Date();
-    const formatedDate = `${date.getDate()}/${date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()}/${date.getFullYear()}`;
+    const formatedDate = `${date.getDate() < 10 ? "0" + date.getDate() : date.getDate()()}/${date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth()}/${date.getFullYear()}`;
     const [teacherName, setTeacherName] = useState("");
     const [studentA, setStudentA] = useState("");
     const [studentB, setStudentB] = useState("");
     const [grade, setGrade] = useState("");
     const [amount, setAmount] = useState();
     const [side, setSide] = useState("left");
+    const navigate = useNavigate();
+
     const saveValues = () => {
-        Cookies.set("teacherName", teacherName, { expires: 1 });
-        Cookies.set("studentA", studentA, { expires: 1 });
-        Cookies.set("studentB", studentB, { expires: 1 });
-        Cookies.set("amount", amount, { expires: 1 });
-        Cookies.set("date", formatedDate, { expires: 1 });
-        Cookies.set("grade", grade, { expires: 1 });
-        Cookies.set("side", side, { expires: 1 });
+        if (amount == null || grade == "" || studentA == "" || studentB == "" || teacherName == "") {
+            toast.error("O formulario não foi preenchido corretamente")
+        } else {
+            Cookies.set("teacherName", teacherName, { expires: 1 });
+            Cookies.set("studentA", studentA, { expires: 1 });
+            Cookies.set("studentB", studentB, { expires: 1 });
+            Cookies.set("amount", amount, { expires: 1 });
+            Cookies.set("date", formatedDate, { expires: 1 });
+            Cookies.set("grade", grade, { expires: 1 });
+            Cookies.set("side", side, { expires: 1 });
+            navigate('/finish')
+        }
     }
     return (
         <form className='form'>
@@ -41,14 +48,15 @@ const Form = () => {
             </p>
             <p className='input-item'>
                 <label>Número de estudantes:</label><br />
-                <input type="number" placeholder='Quantidade' value={amount} onChange={(function studentsAmount(e){ if(e.target.value <= 46 ){
-                   setAmount(e.target.value); 
-                }else{
-                    toast.error("A quantidade deve ser menor que 46")
-                    setAmount(0)
-                }
+                <input type="number" placeholder='Quantidade' value={amount} onChange={(function studentsAmount(e) {
+                    if (e.target.value <= 42) {
+                        setAmount(e.target.value);
+                    } else {
+                        toast.error("A quantidade deve ser menor que 42")
+                        setAmount(NaN)
+                    }
                 })} /><br />
-                <span style={{ color: "var(--red-color)", fontSize: "0.9rem" }}>*Máximo 46 estudantes</span>
+                <span style={{ color: "var(--red-color)", fontSize: "0.9rem" }}>*Máximo 42 estudantes</span>
             </p>
             <p className='input-item'>
                 <fieldset className='radios'>
@@ -65,7 +73,7 @@ const Form = () => {
             </p>
             <p>
                 <Toaster />
-                <Link to="/finish"><button onClick={saveValues()}>Criar</button></Link>
+                <button onClick={saveValues}>Criar</button>
             </p>
             <a href='/'> voltar</a>
         </form>

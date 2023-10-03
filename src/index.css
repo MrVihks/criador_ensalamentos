@@ -22,7 +22,9 @@ section {
     margin-top: 5rem;
     min-height: 100vh;
 }
-
+canvas{
+    background-color: #FFFFFF;
+}
 button {
     border:  2px var(--dark-color) solid;
     border-radius: 1rem;

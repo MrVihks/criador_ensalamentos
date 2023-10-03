@@ -1,9 +1,12 @@
 .canvas-content{
     text-align: center;    
     flex-direction: column;
+    margin:auto;
+}
+.canvas-content .canvas{
     overflow-x: auto;
     white-space: nowrap;
-    margin:auto;
+   
 }
 .canvas-content h1{
     text-transform: uppercase;
@@ -11,7 +14,7 @@
     font-size: 2rem;
 }
 .canvas-content p{
-    margin-bottom: 2rem;
+    margin-top: 0.4rem;
     font-size: 1.2rem;
 }
 
