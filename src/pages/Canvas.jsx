@@ -14,7 +14,7 @@ const Canvas = () => {
     const side = Cookies.get("side");
     return (
         <section className='canvas-content'>
-            <h1 style={{ marginTop: "8rem" }}>Ensalamento</h1>
+            <h1 style={{ marginTop: "2rem" }}>Ensalamento</h1>
             <Display className="display" width="500" height="670" tables={amount} teacherName={teacherName} studentA={studentA} studentB={studentB} grade={grade} date={date} side={side} />
             <a href='/create'> voltar</a>
         </section>

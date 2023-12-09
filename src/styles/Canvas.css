@@ -1,14 +1,13 @@
 .canvas-content{
-    text-align: center;    
+    display: flex;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;   
     flex-direction: column;
-    margin:auto;
-}
-.canvas-content .canvas{
-    overflow-x: auto;
-    white-space: nowrap;
-   
+
 }
 .canvas-content h1{
+    color: var(--dark-color);
     text-transform: uppercase;
     margin: 1rem;
     font-size: 2rem;
@@ -23,4 +22,13 @@
 }
 .description{
     font-size: 1.2rem;
+}
+
+@media (max-width:768px){
+    .canvas{
+        overflow-x: scroll;
+        border: 3px solid var(--dark-color);
+        width: 22em;
+        border-radius: 10px;
+    }
 }
